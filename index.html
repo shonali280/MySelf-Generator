@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuppiya | Essay</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="parent-form">
+        <h1>My Self</h1>
+
+        <div class="first-form">
+            <form action="">
+                <div class="">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter you Name" id="name">
+                </div>
+
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" id="age">
+                </div>
+
+                <div class="">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="0" hidden>--Select your Gender--</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+
+                    </select>
+                </div>
+
+                <div class="">
+                    <button type="button">Next</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="second-form">
+        <form action="">
+            <div class="">
+                <label for="">City</label>
+                <datalist id="city_list">
+                    <option value="Gampaha"></option>
+                    <option value="Ja-Ela"></option>
+                    <option value="Ragama"></option>
+                    <option value="Negombo"></option>
+                    <option value="Wattala"></option>
+                    <option value="Colombo"></option>
+                    <option value="Jaffna"></option>
+
+                </datalist>
+                <input type="text" name="city" id="city" placeholder="Enter your city." list="city_list">
+            </div>
+
+            <div class="">
+                <button type="button">Next</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="third-form">
+        <form action="">
+            <div class="">
+                <label for="favSport">Favourite Sport</label>
+                <datalist id="favSport-list">
+                    <option value="cricket">Cricket</option>
+                    <option value="badminton">Badminton</option>
+                    <option value="chess">Chess</option>
+                    <option value="rugby">Rugby</option>
+                    <option value="football">Football</option>
+                    <option value="elle">Elle</option>
+                </datalist>
+                <input type="text" name="favSport" id="favSport" placeholder="Enter your favourite Sport"
+                    list="favSport-list">
+            </div>
+            <div class="ambition">
+                <label for="ambition">Ambition</label>
+                <input type="text" name="ambition" id="ambition" placeholder="Enter youe ambition.">
+            </div>
+            <div class="">
+                <button type="button">View my self</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
