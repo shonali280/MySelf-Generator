@@ -3,12 +3,12 @@ const form = document.getElementById("profileForm");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
+    const name = document.getElementById("name").value;
     const age = document.getElementById("age").value;
     const gender = document.getElementById("gender").value;
-    const city = document.getElementById("city").value.trim();
-    const sport = document.getElementById("sport").value.trim();
-    const ambition = document.getElementById("ambition").value.trim();
+    const city = document.getElementById("city").value;
+    const sport = document.getElementById("sport").value;
+    const ambition = document.getElementById("ambition").value;
 
     document.getElementById("displayName").textContent = name;
     document.getElementById("displayAge").textContent = age;
@@ -17,7 +17,6 @@ form.addEventListener("submit", function (event) {
     document.getElementById("displaySport").textContent = sport;
     document.getElementById("displayAmbition").textContent = ambition;
 
-    // First letter for avatar
     document.getElementById("avatarLetter").textContent =
-        name ? name.charAt(0).toUpperCase() : "M";
+        name.charAt(0).toUpperCase();
 });
