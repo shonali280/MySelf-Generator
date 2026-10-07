@@ -3,19 +3,21 @@ const form = document.getElementById("profileForm");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Get values from the form
-    const name = document.getElementById("name").value;
+    const name = document.getElementById("name").value.trim();
     const age = document.getElementById("age").value;
     const gender = document.getElementById("gender").value;
-    const city = document.getElementById("city").value;
-    const sport = document.getElementById("sport").value;
-    const ambition = document.getElementById("ambition").value;
+    const city = document.getElementById("city").value.trim();
+    const sport = document.getElementById("sport").value.trim();
+    const ambition = document.getElementById("ambition").value.trim();
 
-    // Display values in the profile card
-    document.getElementById("profileName").textContent = name;
-    document.getElementById("profileAge").textContent = age;
-    document.getElementById("profileGender").textContent = gender;
-    document.getElementById("profileCity").textContent = city;
-    document.getElementById("profileSport").textContent = sport;
-    document.getElementById("profileAmbition").textContent = ambition;
+    document.getElementById("displayName").textContent = name;
+    document.getElementById("displayAge").textContent = age;
+    document.getElementById("displayGender").textContent = gender;
+    document.getElementById("displayCity").textContent = city;
+    document.getElementById("displaySport").textContent = sport;
+    document.getElementById("displayAmbition").textContent = ambition;
+
+    // First letter for avatar
+    document.getElementById("avatarLetter").textContent =
+        name ? name.charAt(0).toUpperCase() : "M";
 });
