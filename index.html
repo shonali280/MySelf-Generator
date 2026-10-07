@@ -4,94 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuppiya | Essay</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>MySelf Profile Generator</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="parent-form">
-        <h1>My Self</h1>
 
-        <div class="first-form">
-            <form action="">
-                <div class="">
-                    <label for="name">Name</label>
-                    <input type="text" placeholder="Enter you Name" id="name">
+    <main class="container">
+
+        <section class="form-section">
+
+            <div class="heading">
+                <p class="tag">MY PROFILE</p>
+                <h1>MySelf Profile Generator</h1>
+                <p>Create a simple personal profile in seconds.</p>
+            </div>
+
+            <form id="profileForm">
+
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
                 </div>
 
-                <div>
+                <div class="input-group">
                     <label for="age">Age</label>
-                    <input type="number" id="age">
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Enter your age"
+                        min="1"
+                        required
+                    >
                 </div>
 
-                <div class="">
+                <div class="input-group">
                     <label for="gender">Gender</label>
-                    <select name="gender" id="gender">
-                        <option value="0" hidden>--Select your Gender--</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-
+                    <select id="gender" required>
+                        <option value="">Select your gender</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
 
-                <div class="">
-                    <button type="button">Next</button>
+                <div class="input-group">
+                    <label for="city">City</label>
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter your city"
+                        required
+                    >
                 </div>
+
+                <div class="input-group">
+                    <label for="sport">Favourite Sport</label>
+                    <input
+                        type="text"
+                        id="sport"
+                        placeholder="Example: Badminton"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label for="ambition">Ambition</label>
+                    <input
+                        type="text"
+                        id="ambition"
+                        placeholder="Example: Software Engineer"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="generate-btn">
+                    Generate My Profile
+                </button>
+
             </form>
 
-        </div>
+        </section>
 
-    </div>
 
-    <div class="second-form">
-        <form action="">
-            <div class="">
-                <label for="">City</label>
-                <datalist id="city_list">
-                    <option value="Gampaha"></option>
-                    <option value="Ja-Ela"></option>
-                    <option value="Ragama"></option>
-                    <option value="Negombo"></option>
-                    <option value="Wattala"></option>
-                    <option value="Colombo"></option>
-                    <option value="Jaffna"></option>
+        <section class="preview-section">
 
-                </datalist>
-                <input type="text" name="city" id="city" placeholder="Enter your city." list="city_list">
+            <div class="profile-card" id="profileCard">
+
+                <div class="avatar">
+                    <span id="avatarLetter">M</span>
+                </div>
+
+                <p class="small-title">PERSONAL PROFILE</p>
+
+                <h2 id="displayName">Your Name</h2>
+
+                <p class="profile-intro">
+                    Complete the form to generate your personal profile.
+                </p>
+
+                <div class="profile-details">
+
+                    <div class="detail">
+                        <span>Age</span>
+                        <strong id="displayAge">—</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span>Gender</span>
+                        <strong id="displayGender">—</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span>City</span>
+                        <strong id="displayCity">—</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span>Favourite Sport</span>
+                        <strong id="displaySport">—</strong>
+                    </div>
+
+                </div>
+
+                <div class="ambition-box">
+                    <span>My Ambition</span>
+                    <h3 id="displayAmbition">
+                        Your ambition will appear here
+                    </h3>
+                </div>
+
             </div>
 
-            <div class="">
-                <button type="button">Next</button>
-            </div>
-        </form>
-    </div>
+        </section>
 
-    <div class="third-form">
-        <form action="">
-            <div class="">
-                <label for="favSport">Favourite Sport</label>
-                <datalist id="favSport-list">
-                    <option value="cricket">Cricket</option>
-                    <option value="badminton">Badminton</option>
-                    <option value="chess">Chess</option>
-                    <option value="rugby">Rugby</option>
-                    <option value="football">Football</option>
-                    <option value="elle">Elle</option>
-                </datalist>
-                <input type="text" name="favSport" id="favSport" placeholder="Enter your favourite Sport"
-                    list="favSport-list">
-            </div>
-            <div class="ambition">
-                <label for="ambition">Ambition</label>
-                <input type="text" name="ambition" id="ambition" placeholder="Enter youe ambition.">
-            </div>
-            <div class="">
-                <button type="button">View my self</button>
-            </div>
-        </form>
-    </div>
+    </main>
 
-    <script src="./assets/js/script.js"></script>
+    <footer>
+        <p>Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
-
 </html>
